@@ -1,4 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
+import { CreateFooDTO } from './dto/create-foo.dto';
 import { Foo } from './foo.model';
 import { FooService } from './foo.service';
 
@@ -14,7 +15,7 @@ export class FooController {
     }
 
     @Post()
-    createFoo(@Body('title') title) {
-        return this.fooService.createFoo(title);
+    createFoo(@Body() createFooDto: CreateFooDTO) {
+        return this.fooService.createFoo(createFooDto);
     }
 }

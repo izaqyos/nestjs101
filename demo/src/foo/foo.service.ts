@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { Foo, FooState } from './foo.model';
 import {v1 as uuidv1} from 'uuid';
+import { CreateFooDTO } from './dto/create-foo.dto';
 @Injectable()
 export class FooService {
 
@@ -10,7 +11,8 @@ export class FooService {
         return this.foos; 
     }
 
-    createFoo(title: string): Foo {
+    createFoo(createFooDTO: CreateFooDTO): Foo {
+        const {title} = createFooDTO;
         const aFoo: Foo = {
             id: uuidv1(),
             title,
