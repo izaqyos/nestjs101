@@ -14,7 +14,7 @@ export class FooController {
     }
 
     @Post()
-    createFoo(@Body() body) {
-        console.log(body);
+    createFoo(@Body('title') title) {
+        return this.fooService.createFoo(title);
     }
 }
