@@ -1,4 +1,5 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Foo } from './foo.model';
 import { FooService } from './foo.service';
 
 @Controller('foo')
@@ -8,7 +9,12 @@ export class FooController {
     }
 
     @Get()
-    getFoos() {
+    getFoos(): Foo[] {
         return this.fooService.getFoos();
+    }
+
+    @Post()
+    createFoo(@Body() body) {
+        console.log(body);
     }
 }
