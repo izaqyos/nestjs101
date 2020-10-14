@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Foo, FooState } from './foo.model';
-import * as uuid from 'uuid';
+import {v1 as uuidv1} from 'uuid';
 @Injectable()
 export class FooService {
 
@@ -12,7 +12,7 @@ export class FooService {
 
     createFoo(title: string): Foo {
         const aFoo: Foo = {
-            id: uuid(),
+            id: uuidv1(),
             title,
             state: FooState.Init,
         };
