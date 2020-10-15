@@ -11,6 +11,23 @@ export class FooService {
         return this.foos; 
     }
 
+    getById(id: string): Foo{
+        return this.foos.find(elem => elem.id === id); 
+    }
+
+    updateState(id: string, state: FooState): Foo{
+        const foo = this.getById(id);
+        foo.state = state; 
+        return foo
+    }
+
+    delById(id: string): void{
+        const index = this.foos.findIndex(elem => elem.id === id); 
+        if (index > -1) {
+            this.foos.splice(index, 1); 
+        } 
+    }
+
     createFoo(createFooDTO: CreateFooDTO): Foo {
         const {title} = createFooDTO;
         const aFoo: Foo = {
