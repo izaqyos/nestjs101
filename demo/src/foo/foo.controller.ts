@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, UsePipes, ValidationPipe } from '@nestjs/common';
 import { CreateFooDTO } from './dto/create-foo.dto';
 import { Foo, FooState } from './foo.model';
 import { FooService } from './foo.service';
@@ -32,6 +32,7 @@ export class FooController {
 
 
     @Post()
+    @UsePipes(ValidationPipe)
     createFoo(@Body() createFooDto: CreateFooDTO) {
         return this.fooService.createFoo(createFooDto);
     }
