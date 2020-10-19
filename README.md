@@ -9,18 +9,18 @@ Core WWW technology. Vast majority of websites use it for client side pages (fro
 Its event driven, dynamically typed, functional and imperative and interacts well with the DOM.
 
 ### NodeJs ###
-NodeJs allows JS code to run server side
-Written, initially, by Ryan Dahl for Linux and OSX
-It uses Googles C++ based V8 engine which compiles (jit) JS code to assembler. It also runs optimizations dynamically (inlining, copy elision), plus it has a GC
-It relies heavily on libuv – a C lib that provides an abstraction for non blocking IO. An Event loop and async TCP/UDP/FS operations. Additional C lib are used like openSSL and zlib
-Breaks away from the multi threaded concurrency model for web servers which is quite difficult to use efficiently and is worry free (locks, dead locks, starvation etc).
+* NodeJs allows JS code to run server side
+* Written, initially, by Ryan Dahl for Linux and OSX
+* It uses Googles C++ based V8 engine which compiles (jit) JS code to assembler. It also runs optimizations dynamically (inlining, copy elision), plus it has a GC
+* It relies heavily on libuv – a C lib that provides an abstraction for non blocking IO. An Event loop and async TCP/UDP/FS operations. Additional C lib are used like openSSL and zlib
+* Breaks away from the multi threaded concurrency model for web servers which is quite difficult to use efficiently and is worry free (locks, dead locks, starvation etc).
 
 ### Typescript ###
-TS langauge, developed by Microsoft, is a super set of javascript. It is meant for large scale development and brings many advantages of OO languages such as C# and JAVA. 
+* TS langauge, developed by Microsoft, is a super set of javascript. It is meant for large scale development and brings many advantages of OO languages such as C# and JAVA. 
 Namely:
-Static (optional) type system. Detect errors at compile time. Better communicate intention.
-Interfaces, classes, generics and moduls
-TS ”transpiles” to JS code
+* Static (optional) type system. Detect errors at compile time. Better communicate intention.
+* Interfaces, classes, generics and moduls
+* TS ”transpiles” to JS code
 
 ### NestJS concepts ###
 * NestJS is a TS Framework. It shares many concepts other popular frameworks like spring boot and ruby on rails.
