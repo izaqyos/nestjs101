@@ -1,8 +1,8 @@
-#nestjs101.  Demonstrate the basics of NestJS framework #
+# nestjs101.  Demonstrate the basics of NestJS framework #
 NestJS is a framework for building efficient, scalable Typescript server-side applications, combining the flexibility of JS/NodeJS, Type safety of TS and an out-of-the-box application architecture which allows for the creation of highly testable, scalable, loosely coupled, and easily maintainable applications
 
 ## intro to nestjs ##
-It is based on
+It is based oni the following:
 
 ### Javascript ###
 Core WWW technology. Vast majority of websites use it for client side pages (frontend)
@@ -158,15 +158,15 @@ curl --location --request POST 'http://localhost:3000/foo' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'title=new foo'
 
-## branch: create_foo_2##
+## branch: create_foo_2 ##
 chg controller so that create takes params. then call service to crete foo
 create a few tasks. the call get to show them
 
 
-## branch: create_foo_3##
+## branch: create_foo_3 ##
 now add a DTO. change the controller to use it
 
-## branch: foo_crud##
+## branch: foo_crud ##
 add get by id @Get(':id'), create foo and get by id (@Param('id')) use array.find(elem => predicate)
 add delete by id @Delete(':id'), create foo and delete by id (@Param('id')).  use array.findIndex(elem => predicate), then splice index,1
 
@@ -181,7 +181,7 @@ curl --location --request PATCH 'http://localhost:3000/foo/9a20cc40-0ef1-11eb-a5
 --data-urlencode 'state=WIP'
 
 
-## branch: validationPipe##
+## branch: validationPipe ##
 install packages:
 $ npm i class-validator class-transformer --save
 
